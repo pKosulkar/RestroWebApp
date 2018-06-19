@@ -1,0 +1,14 @@
+$(document).ready(function(){
+    $("#mycarousel").carousel({interval:2000});
+    $("#CarouselButton").click(function(){
+        if($("#CarouselButton").children('span').hasClass('fa-pause')){
+            $("#mycarousel").carousel('pause');
+            $("#CarouselButton").children('span').removeClass("fa-pause");
+            $("#CarouselButton").children('span').addClass("fa-play");
+        }else{
+            $("#mycarousel").carousel('cycle');
+            $("#CarouselButton").children('span').removeClass("fa-play");
+            $("#CarouselButton").children('span').addClass("fa-pause");
+        }
+    });
+});
